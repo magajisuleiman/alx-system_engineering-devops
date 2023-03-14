@@ -1,6 +1,2 @@
 #!/bin/bash
-<<<<<<< HEAD
 echo {a..z}{a..z}|tr "" "\n"|grep -v "oo"
-=======
-echo {a..z}{a..z}|tr " " "\n"|greg -v "oo"
->>>>>>> 15972927ff189481ffa87378203f4acb9ee9e606
