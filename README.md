@@ -1,4 +1,17 @@
-Alx 0x00. Shell Basics, Devops, Shell and Bash 
+Bash Shell Scripts :octocat:
 
-This Repository contains source code for all the project task 
-and their solutions.
+    Each repository in this folder illustrates an essential concept of DevOps.
+
+Built with
+
+    CLI
+    Bash scripts
+    Puppet
+    Nginx servers, HAProxy Load Balancers
+    MySQL, SQLAlchemy
+    OS: Ubuntu 14.04 LTS
+    Style guidelines: Shellscript for Bash
+
+Authors
+
+Magaji Suleiman (</>00tDevOps)
