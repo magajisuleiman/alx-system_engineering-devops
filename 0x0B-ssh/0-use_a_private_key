@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
 #Bash script that uses ssh to connect to your server using the private key
 
-server_address="354633-web-01"
-
-# SSH command using single-character flags
-ssh -i ~/.ssh/school ubuntu@"$server_address"
+ssh -i ~/.ssh/school ubuntu@354633-web-01
