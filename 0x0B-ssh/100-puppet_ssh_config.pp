@@ -6,7 +6,7 @@ class ssh_config {
     owner   => 'ubuntu',
     group   => 'ubuntu',
     content => @("EOF"),
-      Host your_server_address_here
+      Host 3.84.239.242
           IdentityFile ~/.ssh/school
           PasswordAuthentication no
     EOF
