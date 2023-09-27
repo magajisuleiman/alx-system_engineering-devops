@@ -1,2 +1,5 @@
+#!/usr/bin/env bash
+#Fix curl error message by starting Apache service
+
 docker build -t my-apache-image .
 docker run -d -p 80:80 --name my-apache-container my-apache-image
