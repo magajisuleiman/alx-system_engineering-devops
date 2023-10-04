@@ -3,7 +3,11 @@
 # Add to HTTP header
 
 
-ADD_HEADER="add_header X-Served-By \$HOSTNAME;"
+# Get the hostname of the server
+HOSTNAME=$(hostname)
+
+# Create the custom header using the server's hostname
+ADD_HEADER="add_header X-Served-By $HOSTNAME;"
 
 # Update package list and install Nginx
 sudo apt-get -y update
