@@ -3,16 +3,20 @@
 # Add to HTTP header
 
 
-ADD_HEADER="\\\tadd_header X-Served-By $HOSTNAME;"
+ADD_HEADER="add_header X-Served-By \$HOSTNAME;"
 
-# configure server
+# Update package list and install Nginx
 sudo apt-get -y update
 sudo apt-get -y install nginx
-echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
-sed -i 's/listen 80 default_server;/listen 80;/g' /etc/nginx/sites-available/default
 
-# Header is updated (add_header to file)
+# Create a simple Hello World index page
+echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
+
+# Remove 'default_server' from the default Nginx configuration
+sudo sed -i 's/listen 80 default_server;/listen 80;/g' /etc/nginx/sites-available/default
+
+# Add the custom header to the Nginx configuration
 sudo sed -i "27i $ADD_HEADER" /etc/nginx/sites-available/default
 
-# start server
+# Restart Nginx to apply changes
 sudo service nginx restart
